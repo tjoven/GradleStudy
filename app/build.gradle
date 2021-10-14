@@ -29,3 +29,13 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
 }
+
+jiagu{
+    userName 'wenwen'
+    password '123qwe'
+    keyStorePath 'keyStorePath'
+    keyStorePass 'keyStorePass'
+    keyStoreKeyAlias 'keyStoreKeyAlias'
+    keyStoreKeyAliasPwd 'keyStoreKeyAliasPwd'
+    jiaguToolPath 'jiaguToolPath'
+}
