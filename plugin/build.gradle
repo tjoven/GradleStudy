@@ -11,13 +11,8 @@ dependencies {
 uploadArchives {
     repositories {
         mavenDeployer {
-//            repository(url: uri('../repo'))
-            repository(url: uri('file://C://Users/tjoven/.m2/repository/'))
-//            pom.project {
-//                groupId = 'com.tjoven.plugin'
-//                artifactId = 'jiagu-plugin'
-//                version = '1.0.0'
-//            }
+            repository(url: uri('../repo'))
+//            repository(url: uri('file://C://Users/tjoven/.m2/repository/'))
             // 唯一标识 包名
             pom.groupId = "com.tjoven.plugin"
             // 项目名称
@@ -28,15 +23,6 @@ uploadArchives {
     }
 }
 
-
-//gradlePlugin {
-//    plugins {
-//        lintPlugin {
-//            id = 'com.rocketzly.lintPlugin'//plugin id
-//            implementationClass = 'com.rocketzly.lintplugin.LintPlugin'
-//        }
-//    }
-//}
 
 sourceCompatibility = "7"
 targetCompatibility = "7"
