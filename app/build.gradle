@@ -31,11 +31,11 @@ dependencies {
 }
 
 jiagu{
-    userName 'wenwen'
-    password '123qwe'
-    keyStorePath 'keyStorePath'
-    keyStorePass 'keyStorePass'
-    keyStoreKeyAlias 'keyStoreKeyAlias'
-    keyStoreKeyAliasPwd 'keyStoreKeyAliasPwd'
-    jiaguToolPath 'jiaguToolPath'
+    userName '18504157220'
+    password 'tian@0222'
+    keyStorePath file('lenovobox2019.keystore').absolutePath
+    keyStorePass 'lenovobox2014'
+    keyStoreKeyAlias 'lenovobox.keystore'
+    keyStoreKeyAliasPwd 'lenovobox2014'
+    jiaguToolPath 'D:\\Program Files (x86)\\360jiagubao_windows_64\\360jiagubao_windows_64\\jiagu\\jiagu.jar'
 }

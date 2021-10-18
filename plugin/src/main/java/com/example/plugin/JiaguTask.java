@@ -1,7 +1,9 @@
 package com.example.plugin;
 
+import org.gradle.api.Action;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
+import org.gradle.process.ExecSpec;
 
 import java.io.File;
 
@@ -28,5 +30,36 @@ public class JiaguTask extends DefaultTask {
         System.out.println(TAG+"execute");
         System.out.println(TAG+"apkFile: "+apkFile);
         System.out.println(TAG+"entity: "+entity.toString());
+        //登录
+        getProject().exec(new Action<ExecSpec>() {
+            @Override
+            public void execute(ExecSpec execSpec) {
+                execSpec.commandLine("java","-jar",entity.getJiaguToolPath()
+                        ,"-login",entity.getUserName(),entity.getPassword());
+            }
+        });
+
+        //签名
+        getProject().exec(new Action<ExecSpec>() {
+            @Override
+            public void execute(ExecSpec execSpec) {
+                execSpec.commandLine("java","-jar",entity.getJiaguToolPath()
+                        ,"-importsign",entity.getKeyStorePath()
+                        ,entity.getKeyStorePass()
+                        ,entity.getKeyStoreKeyAlias()
+                        ,entity.getKeyStoreKeyAliasPwd());
+            }
+        });
+
+        //加固
+        getProject().exec(new Action<ExecSpec>() {
+            @Override
+            public void execute(ExecSpec execSpec) {
+                execSpec.commandLine("java","-jar",entity.getJiaguToolPath()
+                        ,"-jiagu",apkFile.getAbsolutePath()
+                        ,apkFile.getParentFile().getAbsolutePath()
+                        ,"-autosign");
+            }
+        });
     }
 }
