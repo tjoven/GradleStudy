@@ -37,5 +37,7 @@ jiagu{
     keyStorePass 'lenovobox2014'
     keyStoreKeyAlias 'lenovobox.keystore'
     keyStoreKeyAliasPwd 'lenovobox2014'
-    jiaguToolPath 'D:\\Program Files (x86)\\360jiagubao_windows_64\\360jiagubao_windows_64\\jiagu\\jiagu.jar'
+//    jiaguToolPath file('D:\\360jiagubao_windows_64\\360jiagubao_windows_64\\jiagu\\jiagu.jar').absolutePath
+    jiaguToolPath file('../jiaguLib/jiagu.jar').absolutePath
+//    outputFile file('../jiaguLib').absolutePath
 }

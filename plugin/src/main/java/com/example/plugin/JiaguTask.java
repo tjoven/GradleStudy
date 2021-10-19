@@ -39,6 +39,7 @@ public class JiaguTask extends DefaultTask {
             }
         });
 
+        System.out.println(TAG+"签名: ");
         //签名
         getProject().exec(new Action<ExecSpec>() {
             @Override
@@ -51,6 +52,8 @@ public class JiaguTask extends DefaultTask {
             }
         });
 
+        System.out.println(TAG+"加固: ");
+        System.out.println(TAG+"加固: "+apkFile.getParentFile().getAbsolutePath());
         //加固
         getProject().exec(new Action<ExecSpec>() {
             @Override

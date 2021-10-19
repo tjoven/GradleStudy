@@ -59,14 +59,21 @@ public class JiaguEntity {
         this.jiaguToolPath = jiaguToolPath;
     }
 
+    public String getOutputFile() {
+        return outputFile;
+    }
+
+    public void setOutputFile(String outputFile) {
+        this.outputFile = outputFile;
+    }
+
     private String password;
     private String keyStorePath;
     private String keyStorePass;
     private String keyStoreKeyAlias;
     private String keyStoreKeyAliasPwd;
     private String jiaguToolPath;
-
-
+    private String outputFile;
 
     @Override
     public String toString() {
@@ -78,6 +85,7 @@ public class JiaguEntity {
                 ", keyStoreKeyAlias='" + keyStoreKeyAlias + '\'' +
                 ", keyStoreKeyAliasPwd='" + keyStoreKeyAliasPwd + '\'' +
                 ", jiaguToolPath='" + jiaguToolPath + '\'' +
+                ", outputFile='" + outputFile + '\'' +
                 '}';
     }
 }
